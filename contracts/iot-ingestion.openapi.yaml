@@ -43,6 +43,15 @@ paths:
                     status: ok
                     service: iot-ingestion
                     version: 0.3.0
+    head:
+      tags: [system]
+      operationId: headHealth
+      summary: Health check HEAD
+      description: Endpoint dùng cho workflow wait-on kiểm tra service sẵn sàng.
+      security: []
+      responses:
+        "200":
+          description: Service đang hoạt động
 
   /readings:
     post:
